@@ -72,11 +72,11 @@ Open your browser and navigate to http://localhost:[port check in your terminal]
   Local Storage: Changes are saved to local storage and synchronized with the API when the user navigates away from the page or reloads.
   API Integration: The application communicates with a backend API to fetch and update todo lists and tasks.
 
-- License
+## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
 
-- Acknowledgments
+## Acknowledgments
 
   Vue.js: Framework used for building the user interface.
   Pinia: State management library.
