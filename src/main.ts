@@ -8,9 +8,13 @@ import {
   faTrashAlt,
   faPlus,
   faBackward,
+  faUser,
+  faCalendar,
+  faSun,
+  faMoon,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faTrashAlt, faPlus, faBackward);
+library.add(faTrashAlt, faPlus, faBackward, faUser, faCalendar, faSun, faMoon);
 
 const app = createApp(App);
 const pinia = createPinia();
