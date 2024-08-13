@@ -16,9 +16,9 @@ This is a Vue.js Todo List application using the Composition API, Pinia for stat
 
 1. **Clone the Repository**
 
-   ```bash
-   git clone https://github.com/ValeriKrisak/todo-list-vue-app.git
-   ```
+```bash
+git clone https://github.com/ValeriKrisak/todo-list-vue-app.git
+```
 
 2. **Navigate to the Project Directory**
 
@@ -35,7 +35,7 @@ npm install
 4.**Run the Development Server**
 
 ```bash
-    npm run dev
+npm run dev
 ```
 
 Open your browser and navigate to http://localhost:[port check in your terminal].
@@ -78,9 +78,9 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-  Vue.js: Framework used for building the user interface.
-  Pinia: State management library.
-  Vite: Build tool and development server.
-  TypeScript: Type-safe programming language.
-  Tailwind CSS: Utility-first CSS framework.
-  Font Awesome: Icon library for the UI.
+  - Vue.js: Framework used for building the user interface.
+  - Pinia: State management library.
+  - Vite: Build tool and development server.
+  - TypeScript: Type-safe programming language.
+  - Tailwind CSS: Utility-first CSS framework.
+  - Font Awesome: Icon library for the UI.
