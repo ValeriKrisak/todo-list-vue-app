@@ -6,7 +6,9 @@
                 {{ task.text }}
             </span>
         </label>
-        <button @click="deleteTask" class="bg-rose-800 text-white px-4 py-1 rounded hover:bg-rose-950">
+        <button @click="deleteTask"
+            class="bg-rose-800 text-white px-4 py-1 rounded hover:bg-rose-950 disabled:bg-slate-500"
+            :disabled="task.taskStatus === 'done'">
             <font-awesome-icon icon="trash-alt" />
         </button>
     </li>

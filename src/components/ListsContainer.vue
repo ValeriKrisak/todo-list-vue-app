@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useTodoStore } from '../store/todoStore';
 import ListDetail from './ListDetail.vue';
 import Task from './Task.vue';
@@ -47,7 +47,13 @@ const errors = ref<ValidationResult['errors']>({});
 const todoLists = computed(() => store.todoLists);
 
 onMounted(() => {
+    store.loadFromLocalStorage();
     store.fetchTodoLists();
+    window.addEventListener('beforeunload', handleBeforeUnload);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('beforeunload', handleBeforeUnload);
 });
 
 const selectList = async (listId: string) => {
@@ -56,6 +62,7 @@ const selectList = async (listId: string) => {
 };
 
 const deselectList = () => {
+    store.saveChangesToServer();
     selectedList.value = null;
 };
 
@@ -82,5 +89,10 @@ const toggleTask = (todolistId: string, taskId: string) => {
 
 const deleteTask = (todolistId: string, taskId: string) => {
     store.deleteTask(todolistId, taskId);
+};
+
+const handleBeforeUnload = async (event: BeforeUnloadEvent) => {
+    event.preventDefault();
+    await store.saveChangesToServer();
 };
 </script>
